@@ -30,15 +30,41 @@ public class ArrayTraining {
 		Random r = new Random();
 		for (int i=0; i<arr.length; i++) {
 			for (int j=0; j<arr[i].length; j++) {
-				arr[i][j]=r.nextInt(max);
+				arr[i][j]=r.nextInt(max)+1;
 			}
 		}
 	}
 	
 	/**
-	 * Calculate sum and print it to console
+	 * Calculate sum of the array elements
 	 */
-	public void printSum(int[][] arr){
-		
+	public long calcSum(int[][] arr){
+		int sum=0;
+		for(int[] re : arr){
+			for(int ce : re){
+				sum+=ce;
+			}
+		}
+		return sum;
+	}
+	
+	/**
+	 * Print 1D array 
+	 */
+	public void printArray (int[] arr){
+		for(int e : arr) System.out.print(e + " ");
+		System.out.println();
+	}
+	
+	/**
+	 * Print 2D array 
+	 */
+	public void printArray (int[][] arr){
+		for(int[] re : arr){
+			for(int ce : re){
+				System.out.print(ce + " ");
+			}
+			System.out.println();	
+		}
 	}
 }
