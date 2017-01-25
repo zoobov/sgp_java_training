@@ -6,10 +6,13 @@ public class MonthSwitch {
 	public MonthSwitch(int m){
 		this.m = m;
 	}
+	
+	/*
+	 * Print season and month by month number
+	 */
 	public void printSeason(){
 		
 		/* Practicing switch */
-				int m = 1; 
 				String s;
 				switch(m){
 					case 1: 
