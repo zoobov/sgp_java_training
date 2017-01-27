@@ -66,6 +66,36 @@ public class ArrayTraining {
 	}
 	
 	/*
+	 * Sort array using bubble algorithm
+	 */
+	public void sort3(int[] arr) {
+		long iter=0, t=System.nanoTime();
+		int tmp; 
+		boolean sorted = false;
+		while (!sorted){
+			sorted=true;
+			for (int i=1; i<arr.length; i++, iter++){
+				if (arr[i-1]>arr[i]){
+					tmp=arr[i-1];
+					arr[i-1]=arr[i];
+					arr[i]=tmp;
+					sorted=false;
+				}
+				if (arr[arr.length-(i+1)]>arr[arr.length-i]){
+					tmp=arr[arr.length-(i+1)];
+					arr[arr.length-(i+1)]=arr[arr.length-i];
+					arr[arr.length-i]=tmp;
+					sorted=false;
+				}
+			}
+
+		}	
+		t=System.nanoTime()-t;
+		System.out.println("Total iteration: " + iter  + "\nTotal time: " +  t + " ns");
+	}
+	
+	
+	/*
 	 * Sort array using insertion algorithm
 	 */
 	public void sort2(int[] arr){

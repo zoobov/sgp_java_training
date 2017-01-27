@@ -37,10 +37,10 @@ public class Main {
 		at.randomFill(arr0, 100);
 		System.arraycopy(arr0, 0, arr1, 0, arr0.length);
 		at.printArray(arr0);
-		at.sort(arr0);
+		at.sort2(arr0);
 		at.printArray(arr0);
 		at.printArray(arr1);
-		at.sort2(arr1);
+		at.sort3(arr1);
 		at.printArray(arr1);
 		}
 		
